@@ -16,6 +16,8 @@
 
 #import "CloudAnchorManager.h"
 
+#import <Foundation/Foundation.h>
+
 #import <ARCore/ARCore.h>
 #import <FirebaseDatabase/FirebaseDatabase.h>
 
@@ -42,7 +44,8 @@
 
     self.firebaseReference = [[FIRDatabase database] reference];
 
-    self.gSession = [GARSession sessionWithAPIKey:@"your-api-key"
+    // The API key is managed by AR Persistence Internal (nodal-magnet-163018).
+    self.gSession = [GARSession sessionWithAPIKey:@"AIzaSyDjBwjwcw0Qi5lvGSGuXxHI3nraIS4meg4"
                                  bundleIdentifier:nil
                                             error:nil];
     self.gSession.delegateQueue = dispatch_get_main_queue();
